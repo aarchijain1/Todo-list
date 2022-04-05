@@ -17,19 +17,19 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: start;
-  width: 520px;
-  min-height: 600px;
+  width: 32.5rem;
+  min-height: 37.5rem;
   background: #161a2b;
   text-align: center;
-  margin: 128px auto;
+  margin: 1rem auto;
   border-radius: 10px;
-  padding-bottom: 32px;
+  padding-bottom: 2.05rem;
 }
 
 h1 {
-  margin: 32px 0;
+  margin: 2.05rem 0;
   color: #fff;
-  font-size: 24px;
+  font-size: 1.7rem;
 }
 
 .complete {
@@ -133,7 +133,7 @@ h1 {
 .icons {
   display: flex;
   align-items: center;
-  font-size: 24px;
+  font-size: 1.4rem;
   cursor: pointer;
 }
 
