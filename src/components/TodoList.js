@@ -5,18 +5,29 @@ import Todo from './Todo';
 function TodoList() {
     const [todos, setTodos] = useState([]);
 
+    //--------- ADD TODO----------
     // way to make sure that if no one types in a letter it will just not show up
+    // passing this function at line no.-52(onsubmit fn) through onsubmit fn in todoforms.js
     const addTodo = todo => {
         if (!todo.text || /^\s*$/.test(todo.text)) {
             return;
         }
 
-        // storing data in console
+        //inside add todo function storing data in console
         const newTodos = [todo, ...todos];
         setTodos(newTodos);
-        // console.log(...todos);
+        console.log(...todos);
     }
 
+
+    //------------- REMOVE TODO-------------
+    const removeTodo = id => {
+        const removedArr = [...todos].filter(todo => todo.id !== id);
+        setTodos(removedArr);
+    };
+
+
+    // -----------UPDATE TODO-------------
     const updateTodo = (todoId, newValue) => {
         if (!newValue.text || /^\s*$/.test(newValue.text)) {
             return;
@@ -24,13 +35,7 @@ function TodoList() {
         setTodos(prev => prev.map(item => (item.id === todoId ? newValue : item)));
     };
 
-
-    // remove/delete a particuler todo
-    const removeTodo = id => {
-        const removedArr = [...todos].filter(todo => todo.id !== id);
-        setTodos(removedArr);
-    };
-
+    // -----------COMPLETE TODO-------------
     const completeTodo = id => {
         let updatedTodos = todos.map(todo => {
             if (todo.id === id) {

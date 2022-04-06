@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react'
 
 function TodoForm(props) {
+  // input-value of the states, setInput-function that will update the values
     const [input, setInput] = useState(props.edit ? props.edit.value : '');
 
 // useEffect and useRef used for focusing on the cursor(after refreshing page or for
@@ -31,9 +32,11 @@ function TodoForm(props) {
     }
 
     return (
+      // CREATING TODO FORM
         <form onSubmit={handleSubmit} className='todo-form'>
           {props.edit ? (
             <>
+            {/* UPDATE INPUT FORM  */}
               <input
                 placeholder='Update your item'
                 value={input}
@@ -48,6 +51,7 @@ function TodoForm(props) {
             </>
           ) : (
             <>
+            {/* MAIN INPUT FORM */}
               <input
                 placeholder="What's the Plan for Today?"
                 value={input}
