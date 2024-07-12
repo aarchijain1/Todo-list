@@ -1,3 +1,5 @@
+Todo-List Application using React and Redux. This application performs CRUD(Create Read Update Delete) operations with mark as complete and delete all functionality.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
